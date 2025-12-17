@@ -15,14 +15,16 @@ For example, a `Song` and a `MediaItem` have an inheritance relationship because
 
 ### Response 1
 
-1. Your response...
-2. Your response...
-3. Your response...
-4. Your response...
-5. Your response...
-6. Your response...
+**Composition** is a **Has** relationship
 
----
+**Inheritance** is a **Is** relationship
+
+1. **Composition**: A `Car` **Has a** `Engine`
+2. **Inheritance**: A `Dog` **Is a** `Animal`
+3. **Composition**: A `Classroom` **Has** `Students`
+4. **Inheritance**: A `Rectangle` **Is a** `Shape`
+5. **Composition**: A `Computer` **Has a** `CPU`
+6. **Inheritance**: A `Manager` **Is an** `Employee`
 
 ## Question 2
 
@@ -32,9 +34,8 @@ In your own words, explain what polymorphism means and why it is useful. Use the
 
 ### Response 2
 
-Your response...
-
----
+**"Poly"** meaning many, and **"Morph"** meaning transform. Put it together, and you get **"many forms"**: the same method name takes many different forms depending on the object. This is very useful because **child classes** can inherit properties and methods from the **parent class**, but customize them to behave differently. This is really cool because when you call `play()` on any `MediaItem`, **JavaScript** automatically calls the correct version based on the object's class (`Song`, `Podcast`, or `Audiobook`). You don't need to check **"if this is a `Song`, do this..."** it simply does it!
+For instance, a `Song's` `play()` includes the artist, while a `Podcast's` includes the host and episode number, **same method name, different behavior**.
 
 ## Question 3
 
@@ -46,6 +47,8 @@ b) Give an example of when you would want to use a static property or method ins
 
 ### Response 3
 
-a) Your response...
+a) An **instance property** is data that is constructed by the constructor for that **specific instance**, for example: `name`, `age`, `jersey number`. This information will **vary** for every instance of the class.
 
-b) Your response...
+A **static property** is declared **before** a constructor and that data is applied to the **class itself**, not each individual instance, for example: `school name`, `species for animals`, `count of how many objects created`. This data will be **shared** across the entire class.
+
+b) Real world example: In a `Student` class, `name`, `age`, and `grade` would be **instance properties** because they're different for each student. However, `schoolName` and `schoolAddress` would be **static properties** because all students attend the same school at the same address. My `name`, `age`, and `grade` are different from my classmates, but we all go to the same school at the same address.
